@@ -14,12 +14,10 @@ class CalendarsController < ApplicationController
 
   private
   def plan_params
-    params.require(:plan).permit(:date, :plan, :commit)
+    params.require(:plan).permit(:date, :plan,)
   end
 
-  def new
-    @plan  = Plan.new
-  end
+
 
   def getWeek
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
